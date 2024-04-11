@@ -3,14 +3,14 @@
 import styled from "styled-components";
 
 interface NavigationProps{
-    active: boolean
+    $test: boolean
 }
 
 export const NavigationOption = styled.li<NavigationProps>`
-    width: ${({ active }) => (active ? '30px' : '20px')};;
-    height: ${({ active }) => (active ? '30px' : '20px')};;
+    width: ${ props => props.$test ? '30px' : '20px'};;
+    height: ${ props => props.$test ? '30px' : '20px'};;
     border-radius: 50%;
-    background-color: ${({ active }) => (active ? '#160054' : 'white')};
+    background-color: ${ props => props.$test ? '#160054' : 'white'};
     margin-top: 0.5rem;
     border: 3px solid white;
     list-style: none;

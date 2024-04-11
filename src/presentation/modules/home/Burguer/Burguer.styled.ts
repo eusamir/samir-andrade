@@ -3,9 +3,14 @@
 import styled from "styled-components";
 
 interface Burgerprops{
-    active: boolean
+  $test: boolean
+
 }
-  
+
+interface teste{
+  $fundo: Burgerprops
+}
+
 
 export const Container = styled.div<Burgerprops>`
     display: flex;
@@ -19,24 +24,24 @@ export const Container = styled.div<Burgerprops>`
 
     margin-top: 2rem;
     margin-right: 2rem;
-    
+
     cursor: pointer;
 
     transition: all 1s;
 `
 
-export const BurguerActive = styled.div<Burgerprops>`
+export const BurgerActive = styled.div<Burgerprops>`
     display: flex;
-    background-color: ${({ active }) => (active ? 'white' : '')};
+    background-color: ${ props => props.$test ? 'white' : ''};
     width: 300px;
     height: 380px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 0;
     margin-top: 3rem;
     margin-right: 2rem;
-    opacity: ${({ active }) => (active ? '1' : '0')};;
+    opacity: ${ props => props.$test ? '1' : '0'};;
 
     flex-direction: column;
     padding-top: 3rem;
@@ -47,27 +52,26 @@ export const BurguerActive = styled.div<Burgerprops>`
     border-radius: 2rem;
 
     transition: 0.3s ease-in-out;
-
 `
 
 export const FirstBar = styled.div<Burgerprops>`
-    width: ${({ active }) => (active ? '2rem' : '3rem')};
+    width: ${ props => props.$test ? '2rem' : '3rem'};
     height: 0.3rem;
-    position: absolute;
-    background-color: ${({ active }) => (active ? '#FFD749' : 'white')};
+    position: fixed;
+    background-color: ${ props => props.$test ? '#FFD749' : 'white'};
     border-radius: 2rem;
-    transform: ${({ active }) => (active ? 'rotate(45deg) translate(0.7rem, 0.4rem)' : '')};
+    transform: ${ props => props.$test ? 'rotate(45deg) translate(0.7rem, 0.4rem)' : ''};
     transition: ease-in-out 0.2s;
     z-index: 1;
 `
 export const SecondBar = styled.div<Burgerprops>`
-    width: ${({ active }) => (active ? '2rem' : '2rem')};
+    width: ${ props => props.$test ? '2rem' : '2rem'};
     height: 0.30rem;
-    position: absolute;
-    background-color: ${({ active }) => (active ? '#FFD749' : 'white')};
+    position: fixed;
+    background-color: ${ props => props.$test ? '#FFD749' : 'white'};
     margin-top: 10px;
     border-radius: 2rem;
-    transform: ${({ active }) => (active ? 'rotate(135deg) translate(-0.1rem, -0.3rem)' : '')};
+    transform: ${ props => props.$test ? 'rotate(135deg) translate(-0.1rem, -0.3rem)' : ''};
     transition: ease-in-out 0.2s;
     z-index: 1;
 `

@@ -1,4 +1,5 @@
 import { Burguer } from '../Burguer/Burguer'
+import InfinityScrolling from '../InfinityScrolling/InfinityScrolling'
 import { Navigation } from '../Navigation/Navigation'
 import * as S from './HeroSection.styled'
 export function HeroSection(){
@@ -14,17 +15,10 @@ export function HeroSection(){
                 </S.NameBox>
                 <h2>Full Stack developer</h2>
             </S.TextPresentation>
-            {[...Array(30)].map((_, $index) => (
-              <S.FluidLetters
-              key={$index}
-              src={'/letrasNome.svg'}
-              alt=""
-              index={$index}
-              />
-            ))}
-            <S.SamirImg 
+            <InfinityScrolling/>
+            <S.SamirImg
                 src={'/samiii.png'}
-                alt={'imagem samir'} 
+                alt={'imagem samir'}
                 width={372}
                 height={372}/>
         </S.InfoSamirContainer>

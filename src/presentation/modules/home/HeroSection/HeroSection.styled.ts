@@ -1,20 +1,6 @@
 'use client'
 
-import styled, { css, keyframes } from "styled-components";
-
-const moveDown2 = keyframes`
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(4200%);
-  }
-`;
-
-interface FluidLettersProps {
-  index: number;
-}
-
+import styled from "styled-components";
 
 export const Container = styled.section`
     display: flex;
@@ -25,7 +11,6 @@ export const Container = styled.section`
     position: relative;
     overflow: hidden;
     scroll-snap-align: start;
-    scrollbar-color: red;
 `
 
 export const NameBox = styled.div`
@@ -59,24 +44,15 @@ export const TextPresentation = styled.div`
 `
 
 export const Logo = styled.img`
-    position: absolute;
+    position: fixed;
     padding: 5rem;
     top: 0;
     left: 0;
+    z-index: 9999;
 `
 
 export const RighSection = styled.div`
     display: block;
-`
-export const FluidLetters = styled.img<FluidLettersProps>`
-    position: absolute;
-    z-index: 0; 
-    left: 62%;
-    top: 0;
-    animation: ${moveDown2} 100s linear infinite;
-    ${({ index }) => css`
-        margin-top: calc(${index} * -19rem - 19rem);
-    `}
 `
 export const SamirImg = styled.img`
     position: relative;
@@ -86,8 +62,8 @@ export const SamirImg = styled.img`
 export const Ellipse = styled.img`
     position: absolute;
     bottom: 0;
-    left: 50%; 
-    transform: translateX(-50%); 
+    left: 50%;
+    transform: translateX(-50%);
 `
 export const Teste = styled.div`
     height:100px;
