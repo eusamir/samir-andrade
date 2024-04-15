@@ -1,5 +1,5 @@
 import * as S from './AboutSection.styled'
-export function AboutMeSection(){
+export function AboutMeSection(isActive:any){
   return(
     <S.Container>
 

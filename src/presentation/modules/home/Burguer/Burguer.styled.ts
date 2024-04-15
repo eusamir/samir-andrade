@@ -4,13 +4,19 @@ import styled from "styled-components";
 
 interface Burgerprops{
   $test: boolean
+  currentSection?: string
 
 }
 
-interface teste{
-  $fundo: Burgerprops
-}
-
+const getBackgroundColor= (props: Burgerprops) => {
+    if (props.currentSection === 'hero' && props.$test === false) {
+      return 'white';
+    } else if (props.currentSection === 'hero' && props.$test === true) {
+      return '#FFD749';
+    } else {
+      return '#FFD749';
+    }
+  };
 
 export const Container = styled.div<Burgerprops>`
     display: flex;
@@ -52,13 +58,14 @@ export const BurgerActive = styled.div<Burgerprops>`
     border-radius: 2rem;
 
     transition: 0.3s ease-in-out;
+    visibility: ${props => props.$test ? 'visible' : 'hidden'};
 `
 
 export const FirstBar = styled.div<Burgerprops>`
     width: ${ props => props.$test ? '2rem' : '3rem'};
     height: 0.3rem;
     position: fixed;
-    background-color: ${ props => props.$test ? '#FFD749' : 'white'};
+    background-color: ${getBackgroundColor};
     border-radius: 2rem;
     transform: ${ props => props.$test ? 'rotate(45deg) translate(0.7rem, 0.4rem)' : ''};
     transition: ease-in-out 0.2s;
@@ -68,7 +75,7 @@ export const SecondBar = styled.div<Burgerprops>`
     width: ${ props => props.$test ? '2rem' : '2rem'};
     height: 0.30rem;
     position: fixed;
-    background-color: ${ props => props.$test ? '#FFD749' : 'white'};
+    background-color: ${getBackgroundColor};
     margin-top: 10px;
     border-radius: 2rem;
     transform: ${ props => props.$test ? 'rotate(135deg) translate(-0.1rem, -0.3rem)' : ''};
@@ -80,7 +87,7 @@ export const Link = styled.a`
     font-weight: 500;
     font-size: 1.4rem;
     padding: 0.2rem;
-    color: #FFD749;
+    color: #1C0D79;
     &:hover{
         opacity: 0.8;
     }
@@ -96,7 +103,7 @@ export const LinkContact = styled.a`
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0.3rem;
-    color: #FFD749;
+    color: #1C0D79;
 
     &:hover{
         opacity: 0.8;

@@ -1,12 +1,11 @@
-import { Burguer } from '../Burguer/Burguer'
+import { Header } from '../Header/Header'
 import InfinityScrolling from '../InfinityScrolling/InfinityScrolling'
 import { Navigation } from '../Navigation/Navigation'
 import * as S from './HeroSection.styled'
 export function HeroSection(){
     return(
-      <S.Container>
-        <S.Logo src={'/logo.png'} alt="logo"/>
-        <Burguer/>
+      <S.Container id="hero">
+        <Header/>
         <S.InfoSamirContainer>
             <S.TextPresentation>
                 <h2>Hello, I am</h2>

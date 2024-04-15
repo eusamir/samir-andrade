@@ -43,14 +43,6 @@ export const TextPresentation = styled.div`
     font-size: 3rem;
 `
 
-export const Logo = styled.img`
-    position: fixed;
-    padding: 5rem;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-`
-
 export const RighSection = styled.div`
     display: block;
 `
