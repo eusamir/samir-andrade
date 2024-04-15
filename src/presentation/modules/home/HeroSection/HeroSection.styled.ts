@@ -11,6 +11,7 @@ export const Container = styled.section`
     position: relative;
     overflow: hidden;
     scroll-snap-align: start;
+    z-index: 1;
 `
 
 export const NameBox = styled.div`
@@ -59,4 +60,10 @@ export const Ellipse = styled.img`
 `
 export const Teste = styled.div`
     height:100px;
+`
+
+export const RightSection = styled.div`
+  position: absolute;
+  bottom: 0;
+  margin-left: 105rem;
 `

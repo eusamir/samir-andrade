@@ -22,7 +22,9 @@ export function HeroSection(){
                 height={372}/>
         </S.InfoSamirContainer>
         <S.Ellipse src="/Ellipse.svg" alt="" />
-        <Navigation/>
+        <S.RightSection>
+          <Navigation sectionColor='#ffff'/>
+        </S.RightSection>
       </S.Container>
     )
   }
