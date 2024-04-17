@@ -44,6 +44,7 @@ export const Image = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
+  margin-right: -15rem;
   width: 70vw;
   height: 80vh;
 `
