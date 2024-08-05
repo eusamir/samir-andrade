@@ -4,16 +4,19 @@ import styled from "styled-components";
 
 interface Burgerprops{
   $test: boolean
-  currentSection?: string
+  $currentSection?: string
 
 }
 
 const getBackgroundColor= (props: Burgerprops) => {
-    if (props.currentSection === 'hero' && props.$test === false) {
+    if (props.$currentSection === 'hero' && props.$test === false) {
       return 'white';
-    } else if (props.currentSection === 'hero' && props.$test === true) {
+    } else if (props.$currentSection === 'hero' && props.$test === true) {
       return '#FFD749';
-    } else {
+    } else if (props.$currentSection === 'throughoutYears' && props.$test === false) {
+      return 'white'
+    }
+    else {
       return '#FFD749';
     }
   };
@@ -54,6 +57,8 @@ export const BurgerActive = styled.div<Burgerprops>`
     padding-left: 1.5rem;
 
     transform-origin: top right;
+
+    box-shadow: 10px 4px 4px 4px rgba(0, 0, 0, 0.2);;
 
     border-radius: 2rem;
 

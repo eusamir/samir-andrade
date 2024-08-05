@@ -28,10 +28,12 @@ export function Header(){
     return(
         <>
         <S.LogoContainer>
-                <S.Logo src="/logo.png" alt="logo" isVisible={currentSectionId === "hero"} />
-                <S.Logo src="/logo2.png" alt="logo" isVisible={currentSectionId !== "hero"} />
-            </S.LogoContainer>
-        <Burguer currentSection={currentSectionId}/>
+                <S.Logo src="/logo.png" alt="logo" $isVisible={currentSectionId === "hero"} />
+                <S.Logo src="/logo2.png" alt="logo" $isVisible={currentSectionId === "aboutMe"} />
+                <S.Logo src="/logoWhite.png" alt="logo" $isVisible={currentSectionId === "throughoutYears"} />
+                <S.Logo src="/logo2.png" alt="logo" $isVisible={currentSectionId === "tecsUsed"} />
+        </S.LogoContainer>
+        <Burguer $currentSection={currentSectionId}/>
         </>
     )
 }

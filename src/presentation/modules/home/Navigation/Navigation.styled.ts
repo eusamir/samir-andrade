@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 interface NavigationProps{
     $test: boolean
-    sectionColor?: string
+    $sectionColor?: string
 }
 
 export const NavigationOption = styled.li<NavigationProps>`
@@ -13,7 +13,7 @@ export const NavigationOption = styled.li<NavigationProps>`
     border-radius: 50%;
     background-color:'white';
     margin-top: 0.5rem;
-    border: 7px solid ${ props => `${props.sectionColor}`};
+    border: 7px solid ${ props => `${props.$sectionColor}`};
     list-style: none;
     transition: ease-in-out 0.5s;
     cursor: pointer;

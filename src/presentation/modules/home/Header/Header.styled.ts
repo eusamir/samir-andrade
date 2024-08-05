@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 interface LogoProps{
-    isVisible: boolean
+    $isVisible: boolean
 }
 
 export const LogoContainer = styled.div`
@@ -14,6 +14,6 @@ export const Logo = styled.img<LogoProps>`
     top: 0;
     left: 0;
     z-index: 9999;
-    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+    opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
     transition: opacity 0.5s ease-in-out;
 `;

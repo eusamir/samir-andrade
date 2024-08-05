@@ -4,10 +4,10 @@ import { useState } from 'react'
 import * as S from './Burguer.styled'
 
 interface BurguerProps{
-    currentSection: string
+    $currentSection: string
 }
 
-export function Burguer({currentSection}:BurguerProps){
+export function Burguer({$currentSection}:BurguerProps){
     const [activeBurguer, isActiveBurguer] = useState(false)
     
     function handleBurguerMenu(){
@@ -17,8 +17,8 @@ export function Burguer({currentSection}:BurguerProps){
     return (
         <>
             <S.Container $test={activeBurguer} onClick={handleBurguerMenu} >
-                <S.FirstBar $test={activeBurguer} currentSection={currentSection}/>
-                <S.SecondBar $test={activeBurguer} currentSection={currentSection}/>
+                <S.FirstBar $test={activeBurguer} $currentSection={$currentSection}/>
+                <S.SecondBar $test={activeBurguer} $currentSection={$currentSection}/>
             </S.Container>
             <S.BurgerActive $test={activeBurguer}>
                 <S.Link href="#">My Work</S.Link>
