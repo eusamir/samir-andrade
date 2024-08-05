@@ -15,6 +15,8 @@ const getBackgroundColor= (props: Burgerprops) => {
       return '#FFD749';
     } else if (props.$currentSection === 'throughoutYears' && props.$test === false) {
       return 'white'
+    } else if (props.$currentSection === 'projectSection' && props.$test === false){
+      return 'white';
     }
     else {
       return '#FFD749';
