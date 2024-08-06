@@ -28,4 +28,10 @@ export const Button = styled.button`
 export const Title = styled.h1``
 export const CarouselContainer = styled.div`
   display: flex;
+  margin-left: 20rem;
+`
+export const Slider = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 200px;
 `
