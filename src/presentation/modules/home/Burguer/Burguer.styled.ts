@@ -24,7 +24,9 @@ const getBackgroundColor= (props: Burgerprops) => {
   };
 
 export const Container = styled.div<Burgerprops>`
-    display: flex;
+    display: ${props => {
+    return props.$currentSection === 'contactMe' ? 'none' : 'flex';
+    }};
     position: absolute;
     top: 0;
     right: 0;
@@ -52,7 +54,7 @@ export const BurgerActive = styled.div<Burgerprops>`
     z-index: 0;
     margin-top: 3rem;
     margin-right: 2rem;
-    opacity: ${ props => props.$test ? '1' : '0'};;
+    opacity: ${ props => props.$test ? '1' : '0'};
 
     flex-direction: column;
     padding-top: 3rem;
@@ -60,7 +62,7 @@ export const BurgerActive = styled.div<Burgerprops>`
 
     transform-origin: top right;
 
-    box-shadow: 10px 4px 4px 4px rgba(0, 0, 0, 0.2);;
+    box-shadow: 10px 4px 4px 4px rgba(0, 0, 0, 0.2);
 
     border-radius: 2rem;
 

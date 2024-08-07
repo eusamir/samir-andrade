@@ -4,6 +4,7 @@ import * as S from './styled'
 import * as ThroughoutTheYearsSection from "@/presentation/modules/throughoutTheYears";
 import * as TecsUsed from '@/presentation/modules/tecsUsed'
 import * as ProjectsSection from '@/presentation/modules/projetcs'
+import * as ContactMeSection from '@/presentation/modules/contactMe'
 export default function Home() {
 
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ThroughoutTheYearsSection.ThroughoutTheYearsSection/>
       <TecsUsed.TecsUsed/>
       <ProjectsSection.ProjectsSection/>
+      <ContactMeSection.ContactMe/>
     </S.Container>
   )
 }

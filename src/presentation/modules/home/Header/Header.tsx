@@ -33,6 +33,7 @@ export function Header(){
                 <S.Logo src="/logoWhite.png" alt="logo" $isVisible={currentSectionId === "throughoutYears"} />
                 <S.Logo src="/logo2.png" alt="logo" $isVisible={currentSectionId === "tecsUsed"} />
                 <S.Logo src="/logoWhite.png" alt="logo" $isVisible={currentSectionId === "projectSection"} />
+                <S.Logo src="/logoBlack.png" alt="logo" $isVisible={currentSectionId === "contactMe"} />
         </S.LogoContainer>
         <Burguer $currentSection={currentSectionId}/>
         </>

@@ -28,5 +28,6 @@ export const NavigationOptionContainer = styled.ul`
     padding: 5rem;
     gap: 5px;
     bottom: 0;
+    width: 10%;
 
 `

@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-spring/parallax": "^9.7.3",
+    "axios": "^1.7.3",
     "editorconfig": "^2.0.0",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.368.0",

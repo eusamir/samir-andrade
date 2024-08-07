@@ -9,14 +9,14 @@ interface BurguerProps{
 
 export function Burguer({$currentSection}:BurguerProps){
     const [activeBurguer, isActiveBurguer] = useState(false)
-    
+
     function handleBurguerMenu(){
         isActiveBurguer(!activeBurguer)
         console.log(activeBurguer)
     }
     return (
         <>
-            <S.Container $test={activeBurguer} onClick={handleBurguerMenu} >
+            <S.Container $test={activeBurguer} onClick={handleBurguerMenu} $currentSection={$currentSection}>
                 <S.FirstBar $test={activeBurguer} $currentSection={$currentSection}/>
                 <S.SecondBar $test={activeBurguer} $currentSection={$currentSection}/>
             </S.Container>

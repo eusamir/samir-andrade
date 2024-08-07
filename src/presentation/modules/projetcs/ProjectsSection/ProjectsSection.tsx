@@ -5,32 +5,46 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
 const projects = [{
-    img: 'teste',
-    title: 'titulo',
-    description: 'string',
-    tecs: ['teste', 'teste'],
-    url: 'teste'
+    img: '/oxyspaces.svg',
+    title: 'Oxyspaces',
+    description: 'Marketplace for renting spaces',
+    tecs: ['/next.png', '/styled.svg', '/java.png', '/typescript.png'],
+    url: 'https://oxyspaces.oxygeni.com.br/'
 },
 {
-  img: 'teste',
-  title: 'titulo',
-  description: 'string',
-  tecs: ['teste', 'teste'],
-  url: 'teste'
+  img: '/oxy.png',
+  title: 'Oxygeni',
+  description: 'Website for Oxygeni',
+  tecs: ['/next.png', '/styled.svg', '/typescript.png'],
+  url: 'https://oxygeni.com.br/'
 },
 {
-  img: 'teste',
-  title: 'titulo',
-  description: 'string',
-  tecs: ['teste', 'teste'],
-  url: 'teste'
+  img: '/ceuma.svg',
+  title: 'MarketPlace Ceuma',
+  description: 'Marketplace for searching courses',
+  tecs: ['/next.png', '/strapi.png', '/styled.svg', '/typescript.png'],
+  url: 'https://ceuma.grupoceuma.com.br'
 },
 {
-  img: 'teste',
-  title: 'titulo',
-  description: 'string',
-  tecs: ['teste', 'teste'],
-  url: 'teste'
+  img: '/oxyplano.png',
+  title: 'Oxyplano',
+  description: 'Content manager for teachers',
+  tecs: ['/next.png', '/mysql.png', '/java.png', '/typescript.png'],
+  url: 'https://eplano.grupoceuma.com.br/signin'
+},
+{
+  img: '/oxyedu.jpg',
+  title: 'OxyEdu',
+  description: 'A institution marktplace',
+  tecs: ['/next.png', '/strapi.png','/typescript.png'],
+  url: '#'
+},
+{
+  img: '/petshop.png',
+  title: 'Vet-Shop',
+  description: 'A vetshop with a RESTful API',
+  tecs: ['/java.png', '/springer.png'],
+  url: 'https://github.com/eusamir/vet-shop'
 }]
 
 export function ProjectsSection(){
@@ -43,10 +57,10 @@ export function ProjectsSection(){
 
   return(
     <S.Container id='projectSection'>
-      <div>
+      <S.HeaderContainer>
         <S.Title>Projects</S.Title>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus</p>
-      </div>
+        <S.Description>Here are some of the most important projects that i created</S.Description>
+      </S.HeaderContainer>
       <S.CarouselContainer ref={sliderRef}>
             {
               projects.map((infos)=>(
@@ -56,7 +70,11 @@ export function ProjectsSection(){
               ))
             }
       </S.CarouselContainer>
-      <S.Button>Ver todos os projetos</S.Button>
+      <a href="https://github.com/eusamir?tab=repositories">
+        <S.Button>
+          See all projects
+        </S.Button>
+      </a>
     </S.Container>
 
   )
