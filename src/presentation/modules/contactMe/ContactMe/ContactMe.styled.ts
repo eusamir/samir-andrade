@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 100vh;
   background-color: #F9F9F9;
@@ -27,5 +28,5 @@ export const HeaderContainer = styled.div`
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem
+  gap: 2rem;
 `

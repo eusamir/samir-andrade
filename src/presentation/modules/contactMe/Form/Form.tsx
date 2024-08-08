@@ -1,13 +1,19 @@
+'use client'
+import { PaperPlane } from 'react-ionicons'
+import * as S from './Form.styled'
 export function Form(){
   return(
     <form>
       <div>
-        <input type="text" name="" placeholder="Your name"/>
-        <input type="text" name="" placeholder="Your email"/>
+        <S.Input type="text" name="" placeholder="Your name"/>
+        <S.Input type="text" name="" placeholder="Your email"/>
       </div>
       <textarea placeholder="Your message">
       </textarea>
-      <button>Send</button>
+      <S.Button>
+        Send
+        <PaperPlane color={'#ffff'}/>
+      </S.Button>
     </form>
   )
 }
