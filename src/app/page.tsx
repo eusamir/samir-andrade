@@ -5,6 +5,7 @@ import * as ThroughoutTheYearsSection from "@/presentation/modules/throughoutThe
 import * as TecsUsed from '@/presentation/modules/tecsUsed'
 import * as ProjectsSection from '@/presentation/modules/projetcs'
 import * as ContactMeSection from '@/presentation/modules/contactMe'
+import * as Footer from '@/presentation/modules/footer'
 export default function Home() {
 
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TecsUsed.TecsUsed/>
       <ProjectsSection.ProjectsSection/>
       <ContactMeSection.ContactMe/>
+      <Footer.Footer/>
     </S.Container>
   )
 }
