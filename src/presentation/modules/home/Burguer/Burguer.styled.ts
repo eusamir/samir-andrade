@@ -25,7 +25,7 @@ const getBackgroundColor= (props: Burgerprops) => {
 
 export const Container = styled.div<Burgerprops>`
     display: ${props => {
-    return props.$currentSection === 'contactMe' ? 'none' : 'flex';
+    return (props.$currentSection === 'contactMe' || props.$currentSection === 'footer') ? 'none' : 'flex';
     }};
     position: absolute;
     top: 0;

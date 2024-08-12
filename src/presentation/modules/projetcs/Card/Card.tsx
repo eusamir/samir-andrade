@@ -25,7 +25,7 @@ export function Card({card}:CardProps){
         <S.Description>{card.description}</S.Description>
           <S.ImageContainer>
             {card.tecs.map((e)=>(
-              <S.LogoTec src={e} key={card.title}/>
+              <S.LogoTec src={e} key={card.url}/>
             ))}
           </S.ImageContainer>
         <S.Link href={card.url}>Check out!</S.Link>

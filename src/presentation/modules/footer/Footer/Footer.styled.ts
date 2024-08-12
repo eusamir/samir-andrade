@@ -21,3 +21,27 @@ export const Social = styled.p`
   color: white;
   font-weight: 500;
 `
+export const LeftSection = styled.div`
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`
+export const RightSection = styled.div`
+  display: flex;
+  margin-right: 5rem;
+  gap: 0.5rem;
+  P{
+    color: white;
+  }
+`
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  div{
+    display: flex;
+    align-items: centerS;
+    gap: 0.5rem;
+  }
+`
