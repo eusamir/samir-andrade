@@ -14,7 +14,15 @@ export function HeroSection() {
           </S.LevelTag>
         </S.TextPresentation>
         <S.SamirImg src={'/samiii.svg'} alt={'imagem samir'} />
-        <S.MobileLetras src={'/mobileLetras.svg'} />
+        <S.LetrasWrapper>
+          {[...Array(20)].map((_, linhaIndex) => (
+            <S.LinhaAnimada key={linhaIndex}>
+              {[...Array(30)].map((_, letraIndex) => (
+                <img key={letraIndex} src="/mobileLetras.svg" alt="" />
+              ))}
+            </S.LinhaAnimada>
+          ))}
+        </S.LetrasWrapper>
       </S.InfoSamirContainer>
       <InfinityScrolling />
       <S.Ellipse src="/fundoHero.svg" alt="" />

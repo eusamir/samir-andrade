@@ -33,7 +33,8 @@ export const Input = styled.input`
     color: black;
   }
   @media (max-width: 768px) {
-    width: 30%;
+    width: 70%;
+    border-radius: 1rem;
   }
 `
 export const InputContainer = styled.div`
@@ -44,7 +45,10 @@ export const InputContainer = styled.div`
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 `
 export const Form = styled.form`
@@ -70,5 +74,6 @@ export const Textarea = styled.textarea`
   }
   @media (max-width: 768px) {
     width: 75%;
+    border-radius: 1.3rem;
   }
 `

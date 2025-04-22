@@ -1,6 +1,19 @@
 'use client'
 
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+interface FluidLettersProps {
+  $index: number
+}
+
+const moveRight = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+`
 
 export const Container = styled.section`
   display: flex;
@@ -109,15 +122,54 @@ export const LevelTag = styled.div`
     display: none;
   }
 `
-export const MobileLetras = styled.img`
+export const MobileLetras = styled.img<FluidLettersProps>`
   display: none;
 
   @media (max-width: 768px) {
     display: block;
     position: absolute;
-    left: 49%;
+    pointer-events: none;
     transform: translateX(-50%);
     border: 0;
     bottom: 3rem;
+
+    left: -10%;
+    animation: ${moveRight} 20s linear infinite;
+
+    ${({ $index }) => css`
+      animation-delay: ${$index * 0.6}s;
+      left: -10%;
+    `}
+  }
+`
+export const LetrasWrapper = styled.div`
+  display: none;
+  @media (max-width: 769px) {
+    display: block;
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    overflow: hidden;
+    background: transparent;
+    z-index: 0;
+
+    img {
+      height: 100%;
+      transform: translateX(-50%);
+    }
+  }
+`
+
+export const LinhaAnimada = styled.div`
+  display: none;
+  @media (max-width: 769px) {
+    display: flex;
+    width: max-content;
+    animation: ${moveRight} 160s linear infinite;
+    gap: 1rem;
+    align-items: center;
+    height: 100%;
   }
 `
