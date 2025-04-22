@@ -26,9 +26,11 @@ export const Title = styled.h1`
 `
 export const Description = styled.p`
   font-weight: 500;
-  padding: 1rem 0 0.7rem 0;
+  margin-bottom: 3rem;
 `
 export const Link = styled.a`
+  position: absolute;
+  bottom: 1rem;
   font-weight: 600;
   text-decoration: none;
   color: #1C0D79;
@@ -44,7 +46,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   gap: 1rem;
   background-color: #F9F9F9;
-  height: 120px;
+  height: 130px;
   border-radius: 1rem 1rem 0 0;
   z-index: 99999999999;
   overflow: hidden;
@@ -75,12 +77,23 @@ export const CardLetterLeft = styled.img`
   z-index: 0;
   left: 0;
   top: 0;
-  margin-left: 2rem;
+  @media (min-width: 1600px) {
+    margin-left: 3rem;
+}
+@media (max-width: 768px) {
+    margin-left: 2.5rem;
+}
 `
 export const CardLetterRight = styled.img`
   position: absolute;
   z-index: 0;
   right: 0;
   top: 0;
-  margin-right: 2rem;
+  @media (min-width: 1600px) {
+    margin-right: 3rem;
+
+}
+@media (max-width: 768px) {
+    margin-right: 2.5rem;
+}
 `

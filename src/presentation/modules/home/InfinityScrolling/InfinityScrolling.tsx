@@ -5,7 +5,7 @@ export default function InfinityScrolling(){
       {[...Array(30)].map((_, $index) => (
               <S.FluidLetters
               key={$index}
-              src={'/letrasNome.svg'}
+              src={'/letrasRoxas.svg'}
               alt=""
               $index={$index}
               />

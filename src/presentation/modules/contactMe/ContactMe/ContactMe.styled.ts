@@ -16,12 +16,20 @@ export const Title = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   color: black;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `
 export const Description = styled.p`
   font-size: 1.3rem;
   color: black;
   font-weight: 400;
   margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    max-width: 300px;
+    align-self: center;
+  }
 `
 export const HeaderContainer = styled.div`
   display: flex;

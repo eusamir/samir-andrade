@@ -14,11 +14,14 @@ const moveDown2 = keyframes`
 
 export const FluidLetters = styled.img<FluidLettersProps>`
     position: absolute;
-    z-index: 0;
+    z-index: -999999999;
     left: 62%;
     top: 0;
     animation: ${moveDown2} 100s linear infinite;
     ${({ $index }) => css`
         margin-top: calc(${$index} * -19rem - 19rem);
     `}
+    @media (max-width: 768px) {
+      display: none
+}
   `

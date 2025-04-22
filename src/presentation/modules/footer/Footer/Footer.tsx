@@ -1,21 +1,20 @@
 import * as S from './Footer.styled'
+import { EnvelopeSimple, LinkedinLogo } from '@phosphor-icons/react/dist/ssr'
 
-export function Footer(){
-  return(
-    <S.Container id='footer'>
+export function Footer() {
+  return (
+    <S.Container id="footer">
       <S.LeftSection>
-        <S.Title>Say hello!</S.Title>
+        <S.Title>Diga olá!</S.Title>
         <S.SocialMediaContainer>
-          <div>
-            <img src='/Envelope.svg' alt='google icon'/>
+          <S.SocialContainer>
+            <EnvelopeSimple size={30} color="#9877FF" />
             <S.Social>samirandradee@gmail.com</S.Social>
-          </div>
-          <div>
-            <img src="/LinkedinLogo.svg" alt="linkedin logo" />
-            <S.Social>
-              in/samir-andrade
-            </S.Social>
-          </div>
+          </S.SocialContainer>
+          <S.SocialContainer>
+            <LinkedinLogo size={30} color="#9877FF" />
+            <S.Social>in/samir-andrade</S.Social>
+          </S.SocialContainer>
         </S.SocialMediaContainer>
       </S.LeftSection>
       <S.RightSection>

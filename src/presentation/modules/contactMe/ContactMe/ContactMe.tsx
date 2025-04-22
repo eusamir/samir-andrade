@@ -5,8 +5,8 @@ export function ContactMe(){
   return(
     <S.Container id='contactMe'>
       <S.HeaderContainer>
-        <S.Title>Send me a message!</S.Title>
-        <S.Description>Feel free to ask a question, share a proposal or simply drop a greeting!</S.Description>
+        <S.Title>Fale comigo!</S.Title>
+        <S.Description>Sinta-se livre para mandar um alô, enviar uma proposta ou então marcar uma reunião!</S.Description>
       </S.HeaderContainer>
       <Form/>
     </S.Container>

@@ -5,73 +5,95 @@ import * as S from './TecsUsed.styled'
 
 const imgs = [
     {
-        img:'/css.png',
-        url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS'
+        img:'/css.svg',
+        url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS',
+        nome: 'Css'
     },
     {
-        img:'/js.png',
-        url:'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
-    }, 
+        img:'/js.svg',
+        url:'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
+        nome: 'JavaScript'
+    },
     {
-        img:'/java.png',
-        url:'https://docs.oracle.com/en/java/'
-    }, 
+        img:'/java.svg',
+        url:'https://docs.oracle.com/en/java/',
+        nome: 'Java'
+    },
     {
-        img:'/docker.png',
-        url:'https://docs.docker.com'
-    }, 
+        img:'/docker.svg',
+        url:'https://docs.docker.com',
+        nome: 'Docker'
+    },
     {
-        img:'/html.png',
-        url:'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
-    }, 
+        img:'/html.svg',
+        url:'https://developer.mozilla.org/pt-BR/docs/Web/HTML',
+        nome: 'Html'
+    },
     {
-        img:'/typescript.png',
-        url:'https://www.typescriptlang.org/docs/'
-    }, 
+        img:'/ts.svg',
+        url:'https://www.typescriptlang.org/docs/',
+        nome: 'Typescript'
+    },
     {
-        img:'/gitlab.png',
-        url:'https://docs.gitlab.com'
-    }, 
+        img:'/git.svg',
+        url:'https://docs.gitlab.com',
+        nome: 'Git'
+    },
     {
-        img:'/react.png',
-        url:'https://react.dev/learn'
-    }, 
+        img:'/react.svg',
+        url:'https://react.dev/learn',
+        nome: 'React'
+    },
     {
-        img:'/springer.png',
-        url:'https://docs.spring.io/spring-boot/documentation.html'
-    }, 
+        img:'/spring.svg',
+        url:'https://docs.spring.io/spring-boot/documentation.html',
+        nome: 'Spring Boot'
+    },
     {
-        img:'/vscode.png',
-        url:'https://code.visualstudio.com'
-    }, 
+        img:'/jest.svg',
+        url:'https://code.visualstudio.com',
+        nome: 'Jest'
+    },
     {
-        img:'/next.png',
-        url:'https://nextjs.org/docs'
-    }, 
+        img:'/nextjs.svg',
+        url:'https://nextjs.org/docs',
+        nome: 'Next'
+    },
     {
-        img:'/mysql.png',
-        url:'https://dev.mysql.com/doc/'
-    }]
+        img:'/mysql.svg',
+        url:'https://dev.mysql.com/doc/',
+        nome: 'Mysql'
+    },
+    {
+      img:'/angular.svg',
+      url:'https://dev.mysql.com/doc/',
+      nome: 'Angular'
+  },
+  {
+    img:'/node.svg',
+    url:'https://dev.mysql.com/doc/',
+    nome: 'Node'
+},
+{
+  img:'/tailwind.svg',
+  url:'https://dev.mysql.com/doc/',
+  nome: 'Tailwind'
+}]
 export function TecsUsed(){
     return(
         <S.Container id="tecsUsed">
-            <S.LeftSection>
                 <S.TitleContainer>
-                    <S.Title>Technologies I use</S.Title>
-                    <S.Paragraph>
-                        Here are some technologies I use on a day-to-day basis to build new applications.
-                    </S.Paragraph>
+                    <S.Title>Hard Skills</S.Title>
                 </S.TitleContainer>
-                <Navigation sectionColor={'#FFD749'}/>
-            </S.LeftSection>
-            <S.RightSection>
-                <br />
-            </S.RightSection>
             <S.CardsContainer>
-                {imgs.map((props) =>(
-                    <Card img={props.img} url={props.url} key={props.img}/>
-                ))}
+              {imgs.map(e=>
+                <S.LogoWrapper href={e.url}>
+                    <S.ImageLogo src={e.img} width={65} height={65} alt=''/>
+                    <S.LogoText>{e.nome}</S.LogoText>
+                </S.LogoWrapper>
+              )}
             </S.CardsContainer>
+            <S.Ellipse src="/fundoTecs.svg" alt="" />
         </S.Container>
     )
 }

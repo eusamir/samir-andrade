@@ -26,17 +26,22 @@ export function Header(){
         return () => observer.disconnect();
     }, []);
     return(
-        <>
+        <S.Container>
         <S.LogoContainer>
-                <S.Logo src="/logo.png" alt="logo" $isVisible={currentSectionId === "hero"} />
-                <S.Logo src="/logo2.png" alt="logo" $isVisible={currentSectionId === "aboutMe"} />
-                <S.Logo src="/logoWhite.png" alt="logo" $isVisible={currentSectionId === "throughoutYears"} />
-                <S.Logo src="/logo2.png" alt="logo" $isVisible={currentSectionId === "tecsUsed"} />
-                <S.Logo src="/logoWhite.png" alt="logo" $isVisible={currentSectionId === "projectSection"} />
-                <S.Logo src="/logoBlack.png" alt="logo" $isVisible={currentSectionId === "contactMe"} />
-                <S.Logo src="/logoBlack.png" alt="logo" $isVisible={currentSectionId === "footer"} />
+                <S.Logo src="/logoRoxa.svg" alt="logo" $isVisible={currentSectionId === "hero"} />
+                <S.Logo src="/logoMobile.svg" alt="logo" $isVisible={currentSectionId === "hero"} $isMobile />
+                <S.Logo src="/logoBrancoS.svg" alt="logo" $isVisible={currentSectionId === "aboutMe"} />
+                <S.Logo src="/logoMobileWhite.svg" alt="logo" $isVisible={currentSectionId === "aboutMe"} $isMobile/>
+                <S.Logo src="/logoRoxaS.svg" alt="logo" $isVisible={currentSectionId === "tecsUsed"} />
+                <S.Logo src="/logoMobileRoxa.svg" alt="logo" $isVisible={currentSectionId === "tecsUsed"} $isMobile/>
+                <S.Logo src="/logoBrancoS.svg" alt="logo" $isVisible={currentSectionId === "projectSection"} />
+                <S.Logo src="/logoMobileWhite.svg" alt="logo" $isVisible={currentSectionId === "projectSection"} $isMobile/>
+                <S.Logo src="/logoPretaS.svg" alt="logo" $isVisible={currentSectionId === "contactMe"} />
+                <S.Logo src="/logoMobileBlack.svg" alt="logo" $isVisible={currentSectionId === "contactMe"} $isMobile/>
+                <S.Logo src="/logoPretaS.svg" alt="logo" $isVisible={currentSectionId === "footer"} />
+                <S.Logo src="/logoMobileBlack.svg" alt="logo" $isVisible={currentSectionId === "footer"} $isMobile/>
         </S.LogoContainer>
         <Burguer $currentSection={currentSectionId}/>
-        </>
+        </S.Container>
     )
 }

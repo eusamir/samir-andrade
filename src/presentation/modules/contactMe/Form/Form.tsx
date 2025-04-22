@@ -3,13 +3,13 @@ import emailjs from '@emailjs/browser';
 import * as S from './Form.styled'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
+import { PaperPlaneTilt } from "@phosphor-icons/react/dist/ssr";
 
 
 export function Form(){
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  console.log(name,email,message)
 
   const form = useRef()
 
@@ -42,7 +42,7 @@ export function Form(){
       </S.Textarea>
       <S.Button>
         Send
-        <Image src='/PaperPlaneTilt.svg' alt='icon' width={25} height={25} style={{color:'white'}}/>
+        <PaperPlaneTilt size={25} color='#9877FF' weight='fill'/>
       </S.Button>
     </S.Form>
   )

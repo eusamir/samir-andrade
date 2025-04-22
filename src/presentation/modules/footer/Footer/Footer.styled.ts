@@ -5,27 +5,43 @@ export const Container = styled.section`
     display: flex;
     height: 20vh;
     justify-content: space-between;
-    background-color: #160054;
+    background-color: #0F0F19;
     position: relative;
     overflow: hidden;
     scroll-snap-align: start;
     z-index: 0;
     align-items: center;
+    @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    gap: 2rem;
+  }
 `
 export const Title = styled.h1`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: white;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
 `
 export const Social = styled.p`
   color: white;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `
 export const LeftSection = styled.div`
   margin-left: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  @media (max-width: 768px) {
+    align-items: center;
+    margin-left: 0;
+  }
 `
 export const RightSection = styled.div`
   display: flex;
@@ -34,14 +50,23 @@ export const RightSection = styled.div`
   P{
     color: white;
   }
+  @media (max-width: 768px) {
+    margin-right: 0;
+    flex-direction: column;
+  }
 `
 export const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  div{
-    display: flex;
-    align-items: centerS;
-    gap: 0.5rem;
+  align-items: flex-start;
+`
+export const SocialContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  svg {
+    flex-shrink: 0;
   }
 `
