@@ -20,7 +20,7 @@ export function Card({ card }: CardProps) {
       </S.HeaderContainer>
       <S.InfoContainer>
         <S.Description>{card.description}</S.Description>
-        <S.Link href={card.url}>Check out!</S.Link>
+        <S.Link href={card.url}>Olhar!</S.Link>
       </S.InfoContainer>
     </S.Container>
   )

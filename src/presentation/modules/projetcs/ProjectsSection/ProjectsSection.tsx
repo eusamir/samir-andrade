@@ -3,6 +3,7 @@ import * as S from './ProjectsSection.styled'
 import { Card } from '../Card/Card'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+import { CaretLeft, CaretRight } from '@phosphor-icons/react/dist/ssr'
 
 const projects = [
   {
@@ -57,10 +58,10 @@ const projects = [
 ]
 
 export function ProjectsSection() {
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, slider] = useKeenSlider({
     slides: {
-      perView: 4,
-      spacing: 20,
+      perView: 3,
+      spacing: -70,
     },
     breakpoints: {
       '(max-width: 1024px)': {
@@ -72,11 +73,14 @@ export function ProjectsSection() {
       '(max-width: 768px)': {
         slides: {
           perView: 1,
-          spacing: 20,
+          spacing: 0,
         },
       },
     },
   })
+
+  const goPrev = () => slider.current?.prev()
+  const goNext = () => slider.current?.next()
 
   return (
     <S.Container id="projectSection">
@@ -87,16 +91,24 @@ export function ProjectsSection() {
         </S.Description>
       </S.HeaderContainer>
       <S.Content>
+        <S.NavButton className="left" onClick={goPrev}>
+          <CaretLeft weight="bold" />
+        </S.NavButton>
+
         <S.CarouselContainer ref={sliderRef}>
           {projects.map((infos) => (
             <S.Slider className="keen-slider__slide" key={infos.title}>
-              <Card card={infos} key={infos.title} />
+              <Card card={infos} />
             </S.Slider>
           ))}
         </S.CarouselContainer>
+
+        <S.NavButton className="right" onClick={goNext}>
+          <CaretRight weight="bold" />
+        </S.NavButton>
       </S.Content>
       <a href="https://github.com/eusamir?tab=repositories">
-        <S.Button>See all projects</S.Button>
+        <S.Button>Olhar todos os projetos</S.Button>
       </a>
     </S.Container>
   )

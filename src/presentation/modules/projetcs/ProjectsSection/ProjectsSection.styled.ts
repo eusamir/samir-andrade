@@ -44,11 +44,13 @@ export const Title = styled.h1`
 export const CarouselContainer = styled.div`
   display: flex;
   margin-top: 15rem;
+  padding: 2rem 0;
 `
 export const Slider = styled.div`
   display: flex;
   justify-content: center;
   width: 12.5rem;
+  margin-left: -0.1rem;
 `
 export const Description = styled.p`
   font-size: 1.3rem;
@@ -74,4 +76,44 @@ export const HeaderContainer = styled.div`
 `
 export const Content = styled.div`
   width: 100vw;
+`
+export const CarouselWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const NavButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 100%;
+  color: white;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &.left {
+    left: 0.5rem;
+  }
+
+  &.right {
+    right: 1.3rem;
+  }
 `
