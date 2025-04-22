@@ -17,7 +17,7 @@ export function HeroSection() {
         <S.LetrasWrapper>
           {[...Array(20)].map((_, linhaIndex) => (
             <S.LinhaAnimada key={linhaIndex}>
-              {[...Array(30)].map((_, letraIndex) => (
+              {[...Array(60)].map((_, letraIndex) => (
                 <img key={letraIndex} src="/mobileLetras.svg" alt="" />
               ))}
             </S.LinhaAnimada>

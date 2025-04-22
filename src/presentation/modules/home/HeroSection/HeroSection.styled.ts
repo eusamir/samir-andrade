@@ -167,7 +167,7 @@ export const LinhaAnimada = styled.div`
   @media (max-width: 769px) {
     display: flex;
     width: max-content;
-    animation: ${moveRight} 160s linear infinite;
+    animation: ${moveRight} 200s linear infinite;
     gap: 1rem;
     align-items: center;
     height: 100%;
