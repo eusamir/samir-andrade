@@ -6,7 +6,6 @@ export const Container = styled.div`
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-  margin-right: -16px;
 
   @media (max-width: 768px) {
     scroll-snap-type: none;

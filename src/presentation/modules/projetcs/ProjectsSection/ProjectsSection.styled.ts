@@ -114,6 +114,6 @@ export const NavButton = styled.button`
   }
 
   &.right {
-    right: 1.3rem;
+    right: 0.5rem;
   }
 `
