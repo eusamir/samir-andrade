@@ -96,18 +96,14 @@ export const Teste = styled.div`
   height: 100px;
 `
 export const LevelTag = styled.div`
-  background-color: #14092c;
-  border: 1px solid #fff;
-  border-radius: 2rem;
-  width: fit-content;
-  padding: 1.3rem 2.5rem;
-  margin-top: 2rem;
-  cursor: grab;
   h2 {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
-    color: #9877ff;
-    line-height: 0;
+    background: linear-gradient(to left, #fff, #9747ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
   }
   @media (max-width: 768px) {
     display: none;
