@@ -19,6 +19,9 @@ export const Container = styled.section`
   overflow: hidden;
   scroll-snap-align: start;
   z-index: 0;
+  @media (max-width: 768px) {
+    height: 130vh;
+  }
 `
 export const Ellipse = styled.img`
   position: absolute;
@@ -128,6 +131,9 @@ export const TimelineWrapper = styled.div`
   z-index: 2;
   width: 100%;
   max-width: 1200px;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `
 export const Title = styled.h1`
   font-size: 3rem;

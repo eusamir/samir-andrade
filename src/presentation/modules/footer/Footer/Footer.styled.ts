@@ -51,7 +51,6 @@ export const RightSection = styled.div`
   }
   @media (max-width: 768px) {
     margin-right: 0;
-    flex-direction: column;
   }
 `
 export const SocialMediaContainer = styled.div`

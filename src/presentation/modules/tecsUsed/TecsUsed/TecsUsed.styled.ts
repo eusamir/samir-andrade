@@ -11,6 +11,9 @@ export const Container = styled.section`
   overflow: hidden;
   scroll-snap-align: start;
   z-index: 0;
+  @media (max-width: 768px) {
+    height: 120vh;
+  }
 `
 export const LeftSection = styled.div``
 export const RightSection = styled.div`
