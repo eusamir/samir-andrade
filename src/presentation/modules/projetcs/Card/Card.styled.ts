@@ -4,20 +4,22 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* background-color:#F9F9F9; */
   width: 380px;
   height: 280px;
   border-radius: 32px;
   cursor: grab;
   user-select: none;
+  overflow: hidden;
   &:active {
     cursor: grabbing;
   }
+
   @media (max-width: 768px) {
     width: 250px;
     height: 220px;
   }
 `
+
 export const Image = styled.img`
   width: 4rem;
   height: 4rem;
@@ -59,6 +61,7 @@ export const Link = styled.a`
   }
 `
 export const HeaderContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,9 +69,9 @@ export const HeaderContainer = styled.div`
   background-color: #f9f9f9;
   height: 130px;
   border-radius: 1rem 1rem 0 0;
-  z-index: 99999999999;
   overflow: hidden;
 `
+
 export const InfoContainer = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -96,28 +99,28 @@ export const ImageContainer = styled.div`
 `
 export const CardLetterLeft = styled.img`
   position: absolute;
-  z-index: 0;
-  left: 0;
   top: 0;
-  margin-left: 5rem;
+  left: 20%;
+  transform: translateX(-30%);
+  z-index: 0;
+  width: 150px;
+  height: auto;
 
-  @media (min-width: 1600px) {
-    margin-left: 3rem;
-  }
   @media (max-width: 768px) {
-    margin-left: 5.2rem;
+    width: 100px;
   }
 `
+
 export const CardLetterRight = styled.img`
   position: absolute;
-  z-index: 0;
-  right: 0;
   top: 0;
-  margin-right: 5rem;
-  @media (min-width: 1600px) {
-    margin-right: 3rem;
-  }
+  right: 20%;
+  transform: translateX(30%);
+  z-index: 0;
+  width: 150px;
+  height: auto;
+
   @media (max-width: 768px) {
-    margin-right: 5.2rem;
+    width: 100px;
   }
 `

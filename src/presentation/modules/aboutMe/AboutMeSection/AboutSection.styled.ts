@@ -20,6 +20,9 @@ export const Container = styled.section`
   scroll-snap-align: start;
   z-index: 0;
   @media (max-width: 768px) {
+    height: 110vh;
+  }
+  @media (min-width: 1300px) {
     height: 130vh;
   }
 `

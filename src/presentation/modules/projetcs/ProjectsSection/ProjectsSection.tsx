@@ -64,7 +64,7 @@ export function ProjectsSection() {
       spacing: -70,
     },
     breakpoints: {
-      '(max-width: 1024px)': {
+      '(max-width: 1300px)': {
         slides: {
           perView: 2,
           spacing: 10,
