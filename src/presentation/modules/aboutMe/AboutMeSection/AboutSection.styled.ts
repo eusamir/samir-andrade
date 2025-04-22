@@ -108,10 +108,10 @@ export const Circle = styled.div<CircleProps>`
 
 export const Line = styled.div`
   position: absolute;
-  top: 30%;
+  top: 28%;
   left: 50%;
   transform: translateX(-50%);
-  height: 60%;
+  height: 65%;
   width: 4px;
   background: #a58df0;
   z-index: -1;

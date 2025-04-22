@@ -6,6 +6,13 @@ import 'keen-slider/keen-slider.min.css'
 
 const projects = [
   {
+    img: '/ruralTrack.svg',
+    title: 'Rural Track',
+    description:
+      'Aplicativo voltado para o desenvolvimento e gerenciamento do produtor rural.',
+    url: 'https://play.google.com/store/apps/details?id=com.ruraltrack.app',
+  },
+  {
     img: '/oxyspaces.svg',
     title: 'Oxyspaces',
     description:

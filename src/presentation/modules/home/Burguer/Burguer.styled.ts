@@ -50,7 +50,7 @@ export const Container = styled.div<Burgerprops>`
   transition: all 1s;
 
   @media (max-width: 768px) {
-    padding: 3.6rem 1rem;
+    padding: 3.6rem 0;
   }
 `
 
@@ -79,6 +79,12 @@ export const BurgerActive = styled.div<Burgerprops>`
 
   transition: 0.3s ease-in-out;
   visibility: ${(props) => (props.$test ? 'visible' : 'hidden')};
+
+  @media (max-width: 768px) {
+    width: 280px;
+    margin-top: 2.7rem;
+    margin-right: 1.2rem;
+  }
 `
 
 export const FirstBar = styled.div<Burgerprops>`
