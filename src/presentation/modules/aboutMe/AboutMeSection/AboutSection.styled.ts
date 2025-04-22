@@ -5,6 +5,9 @@ import styled from "styled-components";
 interface CircleProps {
   isLast?: boolean;
 }
+interface TimelineItemProps {
+  side: "left" | "right";
+}
 
 export const Container = styled.section`
     display: flex;
@@ -32,9 +35,6 @@ export const LettersContainer = styled.div`
   flex-direction: column;
   gap: 5rem;
 `
-interface TimelineItemProps {
-  side: "left" | "right";
-}
 
 export const Timeline = styled.div`
   position: relative;
@@ -58,13 +58,13 @@ export const TimelineItem = styled.div<TimelineItemProps>`
   }
 `;
 
-export const TimelineContent = styled.div`
+export const TimelineContent = styled.div<TimelineItemProps>`
   background: transparent;
   border-radius: 8px;
   padding: 1rem 2rem;
   max-width: 500px;
   color: white;
-  text-align: ${({ theme }) => theme?.side === "left" ? "right" : "left"};
+  text-align: ${({ side }) => (side === "left" ? "right" : "left")};
   overflow: hidden;
 
   h3 {
