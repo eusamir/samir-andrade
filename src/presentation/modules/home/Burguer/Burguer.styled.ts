@@ -50,7 +50,7 @@ export const Container = styled.div<Burgerprops>`
   transition: all 1s;
 
   @media (max-width: 768px) {
-    padding: 3.6rem 2rem;
+    padding: 3.6rem 0;
   }
 `
 
