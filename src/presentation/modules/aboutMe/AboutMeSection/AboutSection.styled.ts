@@ -1,6 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 interface CircleProps {
   isLast?: boolean
@@ -8,6 +9,17 @@ interface CircleProps {
 interface TimelineItemProps {
   side: 'left' | 'right'
 }
+export const TimelineItem = styled(motion.div)<TimelineItemProps>`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: ${({ side }) =>
+    side === 'left' ? 'flex-start' : 'flex-end'};
+
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+  }
+`
 
 export const Container = styled.section`
   display: flex;
@@ -22,7 +34,7 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     height: 110vh;
   }
-  @media (min-width: 1300px) {
+  @media (max-width: 1200px) {
     height: 130vh;
   }
 `
@@ -50,18 +62,6 @@ export const Timeline = styled.div`
   flex-direction: column;
   align-items: center;
   z-index: 2;
-`
-
-export const TimelineItem = styled.div<TimelineItemProps>`
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: ${({ side }) =>
-    side === 'left' ? 'flex-start' : 'flex-end'};
-
-  @media (max-width: 768px) {
-    justify-content: flex-end;
-  }
 `
 
 export const TimelineContent = styled.div<TimelineItemProps>`

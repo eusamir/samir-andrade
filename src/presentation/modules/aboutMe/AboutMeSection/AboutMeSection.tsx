@@ -1,3 +1,4 @@
+'use client'
 import * as S from './AboutSection.styled'
 
 type Experience = {
@@ -58,7 +59,14 @@ export function AboutMeSection() {
         <S.Timeline>
           <S.Title>Minha experiência</S.Title>
           {experiences.map((exp, index) => (
-            <S.TimelineItem key={index} side={exp.side}>
+            <S.TimelineItem
+              key={index}
+              side={exp.side}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.3 }}
+            >
               <S.TimelineContent side={exp.side}>
                 <h3>{exp.title}</h3>
                 <span>{exp.period}</span>
@@ -67,6 +75,7 @@ export function AboutMeSection() {
               <S.Circle isLast={exp.isLast} />
             </S.TimelineItem>
           ))}
+
           <S.Line />
         </S.Timeline>
       </S.TimelineWrapper>
