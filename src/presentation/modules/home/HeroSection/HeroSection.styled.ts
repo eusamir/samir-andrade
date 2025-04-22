@@ -103,7 +103,7 @@ export const Ellipse = styled.img`
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  z-index: 1;
+  z-index: 9999999999;
 `
 export const Teste = styled.div`
   height: 100px;
