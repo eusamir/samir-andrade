@@ -14,28 +14,28 @@ const experiences: Experience[] = [
     period: '2021 - 2021',
     description:
       'Iniciei no grupo Ceuma criando websites e APIs com HTML, CSS e JavaScript, focando em soluções simples e funcionais.',
-    side: 'right'
+    side: 'right',
   },
   {
     title: 'Desenvolvedor Júnior',
     period: '2021 - 2022',
     description:
       'Atuei na manutenção de portais em Angular e na fragmentação da E-Bridge em microsserviços, integrando o AVA ao RM com APIs REST.',
-    side: 'left'
+    side: 'left',
   },
   {
     title: 'Desenvolvedor Pleno',
     period: '2022 - 2023',
     description:
       'Desenvolvi landing pages com Angular e React, o MarketPlace do Grupo Ceuma e APIs com Node.js e mantive sistemas Java legados. Usei Docker, GitLab CI e ajudei na formação de novos devs.',
-    side: 'right'
+    side: 'right',
   },
   {
     title: 'Desenvolvedor Sênior',
     period: '2023 - 2025',
     description:
       'Liderei o time que entregou os marketplace Oxyspaces, o site da Oxygeni e a plataforma Oxyplano, usando React, Strapi, Java e Spring Boot, com foco em arquitetura limpa, testes e Kubernetes.',
-    side: 'left'
+    side: 'left',
   },
   {
     title: 'Analista de Sistemas',
@@ -43,10 +43,9 @@ const experiences: Experience[] = [
     description:
       'Atuo no planejamento técnico, arquitetura de sistemas e validação de soluções com foco em escalabilidade e usabilidade.',
     side: 'right',
-    isLast: true
-  }
+    isLast: true,
+  },
 ]
-
 
 export function AboutMeSection() {
   return (
@@ -60,7 +59,7 @@ export function AboutMeSection() {
           <S.Title>Minha experiência</S.Title>
           {experiences.map((exp, index) => (
             <S.TimelineItem key={index} side={exp.side}>
-              <S.TimelineContent>
+              <S.TimelineContent side={exp.side}>
                 <h3>{exp.title}</h3>
                 <span>{exp.period}</span>
                 <p>{exp.description}</p>

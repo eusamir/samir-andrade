@@ -1,12 +1,12 @@
 'use client'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   position: relative;
   overflow: hidden;
   scroll-snap-align: start;

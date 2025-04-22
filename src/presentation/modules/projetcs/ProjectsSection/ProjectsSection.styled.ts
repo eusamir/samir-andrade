@@ -1,30 +1,30 @@
 'use client'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.section`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #5337A9;
-    position: relative;
-    overflow: hidden;
-    scroll-snap-align: start;
-    z-index: 0;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #5337a9;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
 `
 export const Button = styled.button`
   margin-top: 2rem;
   width: 17.5rem;
   padding: 1.2rem;
-  color: #9877FF;
-  background-color: #14092C;
+  color: #9877ff;
+  background-color: #14092c;
   border: none;
   border-radius: 1.4rem;
   font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
-  &:hover{
+  &:hover {
     filter: brightness(0.9);
   }
   @media (max-width: 768px) {
@@ -62,15 +62,15 @@ export const Description = styled.p`
   }
 `
 export const HeaderContainer = styled.div`
-    display: flex;
-    position: absolute;
-    top: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 3rem;
-    gap: 1rem;
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 1rem;
 `
 export const Content = styled.div`
   width: 100vw;

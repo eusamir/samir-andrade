@@ -1,6 +1,6 @@
 'use client'
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
@@ -16,4 +16,4 @@ export const GlobalStyle = createGlobalStyle`
   body {
     overflow-y: auto;  // Permite o scroll vertical
   }
-`;
+`

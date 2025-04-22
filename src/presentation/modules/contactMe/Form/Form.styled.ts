@@ -1,20 +1,20 @@
 'use client'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: #14092C;
-  color: #9877FF;
+  background-color: #14092c;
+  color: #9877ff;
   font-size: 1.1rem;
   padding: 1.2rem;
   width: 180px;
   border-radius: 2rem;
   border: none;
   cursor: pointer;
-  &:hover{
+  &:hover {
     filter: brightness(0.9);
   }
   @media (max-width: 768px) {
@@ -28,8 +28,8 @@ export const Input = styled.input`
   padding: 1rem;
   border-radius: 3rem;
   border: none;
-  background-color:rgba(153, 119, 255, 0.1);
-  &::placeholder{
+  background-color: rgba(153, 119, 255, 0.1);
+  &::placeholder {
     color: black;
   }
   @media (max-width: 768px) {
@@ -61,15 +61,14 @@ export const Textarea = styled.textarea`
   padding: 1.5rem 0 5rem 1.2rem;
   resize: none;
   border: none;
-  background-color:rgba(153, 119, 255, 0.1);
-  &::placeholder{
+  background-color: rgba(153, 119, 255, 0.1);
+  &::placeholder {
     color: black;
   }
   &::-webkit-scrollbar {
     width: 10px;
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     width: 75%;
   }
-
 `

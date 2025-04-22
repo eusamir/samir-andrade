@@ -1,17 +1,17 @@
 'use client'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.section`
-    display: flex;
-    height: 20vh;
-    justify-content: space-between;
-    background-color: #0F0F19;
-    position: relative;
-    overflow: hidden;
-    scroll-snap-align: start;
-    z-index: 0;
-    align-items: center;
-    @media (max-width: 768px) {
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+  background-color: #0f0f19;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  z-index: 0;
+  align-items: center;
+  @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
     padding: 2rem;
@@ -25,7 +25,6 @@ export const Title = styled.h1`
   @media (max-width: 768px) {
     text-align: center;
   }
-
 `
 export const Social = styled.p`
   color: white;
@@ -47,7 +46,7 @@ export const RightSection = styled.div`
   display: flex;
   margin-right: 5rem;
   gap: 0.5rem;
-  P{
+  P {
     color: white;
   }
   @media (max-width: 768px) {

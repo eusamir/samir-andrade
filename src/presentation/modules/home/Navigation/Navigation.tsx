@@ -7,35 +7,35 @@ interface NavigationProps {
   sectionColor: string
 }
 
-export function Navigation({sectionColor}: NavigationProps) {
-  const [activeNavigation, setActiveNavigation] = useState<string>("");
-  const sectionIds = ['hero', 'aboutMe', 'throughoutYears', 'tecsUsed'];
+export function Navigation({ sectionColor }: NavigationProps) {
+  const [activeNavigation, setActiveNavigation] = useState<string>('')
+  const sectionIds = ['hero', 'aboutMe', 'throughoutYears', 'tecsUsed']
 
   const handleSetActive = (id: string) => {
-    setActiveNavigation(id);
-    const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: 'smooth' });
-  };
+    setActiveNavigation(id)
+    const section = document.getElementById(id)
+    section?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section')
     const options = {
       root: null,
       threshold: 0.5,
-    };
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveNavigation(entry.target.id);
+          setActiveNavigation(entry.target.id)
         }
-      });
-    }, options);
+      })
+    }, options)
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observer.observe(section))
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <S.NavigationOptionContainer>
@@ -45,9 +45,8 @@ export function Navigation({sectionColor}: NavigationProps) {
           $test={activeNavigation === id}
           $sectionColor={sectionColor}
           onClick={() => handleSetActive(id)}
-        >
-        </S.NavigationOption>
+        ></S.NavigationOption>
       ))}
     </S.NavigationOptionContainer>
-  );
+  )
 }

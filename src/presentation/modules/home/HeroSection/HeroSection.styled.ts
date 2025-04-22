@@ -14,7 +14,7 @@ export const Container = styled.section`
   z-index: 1;
   @media (max-width: 768px) {
     z-index: 9999;
-}
+  }
 `
 
 export const NameBox = styled.div`
@@ -24,14 +24,10 @@ export const NameBox = styled.div`
   align-items: center;
   width: fit-content;
   padding: 0 1rem;
-  background: linear-gradient(
-    to right,
-    #9747ff,
-    transparent 100%
-  );
+  background: linear-gradient(to right, #9747ff, transparent 100%);
   @media (max-width: 768px) {
     z-index: 0;
-}
+  }
 `
 export const Nome = styled.h1`
   width: 100%;
@@ -42,7 +38,7 @@ export const Nome = styled.h1`
   @media (max-width: 768px) {
     font-size: 2.8rem;
     z-index: 0;
-}
+  }
 `
 
 export const InfoSamirContainer = styled.div`
@@ -56,7 +52,7 @@ export const TextPresentation = styled.div`
   color: white;
   font-weight: 700;
   font-size: 3rem;
-  h2{
+  h2 {
     font-size: 3rem;
   }
   @media (max-width: 768px) {
@@ -64,10 +60,10 @@ export const TextPresentation = styled.div`
     position: absolute;
     top: 18%;
     left: 8%;
-    h2{
-    font-size: 1.8rem;
+    h2 {
+      font-size: 1.8rem;
+    }
   }
-}
 `
 
 export const RighSection = styled.div`
@@ -87,7 +83,7 @@ export const SamirImg = styled.img`
     width: 250px;
     height: 250px;
   }
-`;
+`
 export const Ellipse = styled.img`
   position: absolute;
   bottom: 0;
@@ -100,17 +96,17 @@ export const Teste = styled.div`
   height: 100px;
 `
 export const LevelTag = styled.div`
-  background-color: #14092C;
-  border: 1px solid #FFF;
+  background-color: #14092c;
+  border: 1px solid #fff;
   border-radius: 2rem;
   width: fit-content;
   padding: 1.3rem 2.5rem;
   margin-top: 2rem;
   cursor: grab;
-  h2{
+  h2 {
     font-size: 1rem;
     font-weight: 500;
-    color: #9877FF;
+    color: #9877ff;
     line-height: 0;
   }
   @media (max-width: 768px) {
@@ -128,4 +124,4 @@ export const MobileLetras = styled.img`
     border: 0;
     bottom: 3rem;
   }
-`;
+`

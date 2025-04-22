@@ -1,7 +1,7 @@
 import * as S from './Card.styled'
 
-interface CardProps{
-  card:{
+interface CardProps {
+  card: {
     img: string
     title: string
     description: string
@@ -9,14 +9,14 @@ interface CardProps{
   }
 }
 
-export function Card({card}:CardProps){
-  return(
+export function Card({ card }: CardProps) {
+  return (
     <S.Container>
       <S.HeaderContainer>
-        <S.Image src={card.img}/>
+        <S.Image src={card.img} />
         <S.Title>{card.title}</S.Title>
-          <S.CardLetterLeft src={'/lettersCard.png'}/>
-          <S.CardLetterRight src={'/lettersCard.png'}/>
+        <S.CardLetterLeft src={'/lettersCard.png'} />
+        <S.CardLetterRight src={'/lettersCard.png'} />
       </S.HeaderContainer>
       <S.InfoContainer>
         <S.Description>{card.description}</S.Description>

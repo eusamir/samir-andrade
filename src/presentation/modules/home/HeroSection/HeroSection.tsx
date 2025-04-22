@@ -1,6 +1,4 @@
-import { Header } from '../Header/Header'
 import InfinityScrolling from '../InfinityScrolling/InfinityScrolling'
-import { Navigation } from '../Navigation/Navigation'
 import * as S from './HeroSection.styled'
 export function HeroSection() {
   return (
@@ -15,13 +13,8 @@ export function HeroSection() {
             <h2>Full Stack developer</h2>
           </S.LevelTag>
         </S.TextPresentation>
-        <S.SamirImg
-          src={'/samiii.svg'}
-          alt={'imagem samir'}
-        />
-        <S.MobileLetras
-          src={'/mobileLetras.svg'}
-        />
+        <S.SamirImg src={'/samiii.svg'} alt={'imagem samir'} />
+        <S.MobileLetras src={'/mobileLetras.svg'} />
       </S.InfoSamirContainer>
       <InfinityScrolling />
       <S.Ellipse src="/fundoHero.svg" alt="" />

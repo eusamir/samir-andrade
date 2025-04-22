@@ -1,5 +1,5 @@
 'use client'
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   border-radius: 32px;
   cursor: grab;
   user-select: none;
-  &:active{
+  &:active {
     cursor: grabbing;
   }
 `
@@ -33,9 +33,9 @@ export const Link = styled.a`
   bottom: 1rem;
   font-weight: 600;
   text-decoration: none;
-  color: #1C0D79;
+  color: #1c0d79;
   padding: 0.5rem 0.5rem 1rem 0;
-  &:hover{
+  &:hover {
     cursor: pointer;
     filter: brightness(1.5);
   }
@@ -45,7 +45,7 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   height: 130px;
   border-radius: 1rem 1rem 0 0;
   z-index: 99999999999;
@@ -54,7 +54,7 @@ export const HeaderContainer = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   gap: 0.5rem;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   background-color: white;
   padding-left: 1rem;
@@ -66,7 +66,8 @@ export const InfoContainer = styled.div`
 export const LogoTec = styled.img`
   width: 30px;
   height: 30px;
-  filter: brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(2699%) hue-rotate(234deg) brightness(90%) contrast(128%);
+  filter: brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(2699%)
+    hue-rotate(234deg) brightness(90%) contrast(128%);
 `
 export const ImageContainer = styled.div`
   display: flex;
@@ -79,10 +80,10 @@ export const CardLetterLeft = styled.img`
   top: 0;
   @media (min-width: 1600px) {
     margin-left: 3rem;
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     margin-left: 2.5rem;
-}
+  }
 `
 export const CardLetterRight = styled.img`
   position: absolute;
@@ -91,9 +92,8 @@ export const CardLetterRight = styled.img`
   top: 0;
   @media (min-width: 1600px) {
     margin-right: 3rem;
-
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     margin-right: 2.5rem;
-}
+  }
 `

@@ -1,1 +1,1 @@
-export * from "./TecsUsed/TecsUsed"
+export * from './TecsUsed/TecsUsed'

@@ -1,24 +1,24 @@
 'use client'
 
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface CircleProps {
-  isLast?: boolean;
+  isLast?: boolean
 }
 interface TimelineItemProps {
-  side: "left" | "right";
+  side: 'left' | 'right'
 }
 
 export const Container = styled.section`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: #14092C;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    scroll-snap-align: start;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #14092c;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  z-index: 0;
 `
 export const Ellipse = styled.img`
   position: absolute;
@@ -28,8 +28,7 @@ export const Ellipse = styled.img`
   width: 100%;
   z-index: 1;
 `
-export const Letters = styled.img`
-`
+export const Letters = styled.img``
 export const LettersContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,18 +44,19 @@ export const Timeline = styled.div`
   flex-direction: column;
   align-items: center;
   z-index: 2;
-`;
+`
 
 export const TimelineItem = styled.div<TimelineItemProps>`
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: ${({ side }) => (side === "left" ? "flex-start" : "flex-end")};
+  justify-content: ${({ side }) =>
+    side === 'left' ? 'flex-start' : 'flex-end'};
 
   @media (max-width: 768px) {
     justify-content: flex-end;
   }
-`;
+`
 
 export const TimelineContent = styled.div<TimelineItemProps>`
   background: transparent;
@@ -64,7 +64,7 @@ export const TimelineContent = styled.div<TimelineItemProps>`
   padding: 1rem 2rem;
   max-width: 500px;
   color: white;
-  text-align: ${({ side }) => (side === "left" ? "right" : "left")};
+  text-align: ${({ side }) => (side === 'left' ? 'right' : 'left')};
   overflow: hidden;
 
   h3 {
@@ -85,11 +85,11 @@ export const TimelineContent = styled.div<TimelineItemProps>`
   @media (max-width: 768px) {
     text-align: left;
   }
-`;
+`
 
 export const Circle = styled.div<CircleProps>`
-  width: ${({ isLast }) => (isLast ? "40px" : "25px")};
-  height: ${({ isLast }) => (isLast ? "40px" : "25px")};
+  width: ${({ isLast }) => (isLast ? '40px' : '25px')};
+  height: ${({ isLast }) => (isLast ? '40px' : '25px')};
   border-radius: 50%;
   background: #a58df0;
   position: absolute;
@@ -101,7 +101,7 @@ export const Circle = styled.div<CircleProps>`
     left: 0;
     transform: translateX(-50%);
   }
-`;
+`
 
 export const Line = styled.div`
   position: absolute;
@@ -119,7 +119,7 @@ export const Line = styled.div`
     top: 21%;
     height: 70%;
   }
-`;
+`
 export const TimelineWrapper = styled.div`
   position: absolute;
   top: 50%;
