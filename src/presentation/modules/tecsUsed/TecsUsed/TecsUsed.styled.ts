@@ -15,6 +15,9 @@ export const Container = styled.section`
   @media (max-width: 768px) {
     height: 120vh;
   }
+  @media (max-height: 700px) {
+    height: 130vh;
+  }
 `
 export const LeftSection = styled.div``
 export const RightSection = styled.div`

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
-  height: 20vh;
+  height: 25vh;
   justify-content: space-between;
   background-color: #0f0f19;
   position: relative;
@@ -16,6 +16,9 @@ export const Container = styled.section`
     height: auto;
     padding: 2rem;
     gap: 2rem;
+  }
+  @media (max-height: 700px) {
+    height: 30vh;
   }
 `
 export const Title = styled.h1`

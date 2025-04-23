@@ -12,6 +12,9 @@ export const Container = styled.section`
   z-index: 0;
   justify-content: center;
   align-items: center;
+  @media (max-height: 700px) {
+    height: 130vh;
+  }
 `
 export const Button = styled.button`
   margin-top: 2rem;

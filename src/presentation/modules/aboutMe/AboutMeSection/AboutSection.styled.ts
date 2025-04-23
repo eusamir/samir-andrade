@@ -37,6 +37,9 @@ export const Container = styled.section`
   @media (max-width: 1200px) {
     height: 130vh;
   }
+  @media (max-height: 700px) {
+    height: 130vh;
+  }
 `
 export const Ellipse = styled.img`
   position: absolute;
