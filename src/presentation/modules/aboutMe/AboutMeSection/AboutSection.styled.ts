@@ -37,7 +37,7 @@ export const Container = styled.section`
   @media (max-width: 1200px) {
     height: 130vh;
   }
-  @media (max-height: 700px) {
+  @media (max-width: 1400px) {
     height: 130vh;
   }
 `
@@ -131,9 +131,6 @@ export const Line = styled.div`
     transform: translateX(0);
     top: 21%;
     height: 70%;
-  }
-  @media (max-width: 1200px) {
-    top: 25%;
   }
 `
 export const TimelineWrapper = styled.div`
