@@ -26,6 +26,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.56.0",
     "react-ionicons": "^1.5.9",
+    "react-parallax-tilt": "^1.7.293",
     "react-toastify": "^11.0.5",
     "styled-components": "^6.1.17",
     "zod": "^3.24.3"

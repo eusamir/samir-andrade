@@ -59,6 +59,9 @@ importers:
       react-ionicons:
         specifier: ^1.5.9
         version: 1.5.9(browserify-css@0.12.0)
+      react-parallax-tilt:
+        specifier: ^1.7.293
+        version: 1.7.293(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-toastify:
         specifier: ^11.0.5
         version: 11.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2009,6 +2012,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-parallax-tilt@1.7.293:
+    resolution: {integrity: sha512-Ss56E6T8GNwxUEymWPE4rfYXjBcvqpnSnqXDZRv2YITo4dLYkqeuUkhn6fAPlkvoAT6qaTx6p8m3oM8NJX31Ng==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react-toastify@11.0.5:
     resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==}
@@ -4519,6 +4528,11 @@ snapshots:
       react-dom: 15.4.2(react@15.4.2)
 
   react-is@16.13.1: {}
+
+  react-parallax-tilt@1.7.293(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-toastify@11.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
