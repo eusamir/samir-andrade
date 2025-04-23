@@ -12,7 +12,7 @@ export const Logo = styled.img<LogoProps>`
   padding: 5rem;
   top: 0;
   left: 0;
-  z-index: 999999999999;
+  z-index: 9999;
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
   ${({ $isMobile }) =>

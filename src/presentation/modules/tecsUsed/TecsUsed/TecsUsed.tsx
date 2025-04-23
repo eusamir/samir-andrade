@@ -84,9 +84,15 @@ export function TecsUsed() {
         <S.Title>Hard Skills</S.Title>
       </S.TitleContainer>
       <S.CardsContainer>
-        {imgs.map((e) => (
-          <S.LogoWrapper href={e.url}>
-            <S.ImageLogo src={e.img} width={65} height={65} alt="" />
+        {imgs.map((e, i) => (
+          <S.LogoWrapper
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.1, delay: i * 0.1 }}
+          >
+            <S.ImageLogo src={e.img} width={65} height={65} alt={e.nome} />
             <S.LogoText>{e.nome}</S.LogoText>
           </S.LogoWrapper>
         ))}

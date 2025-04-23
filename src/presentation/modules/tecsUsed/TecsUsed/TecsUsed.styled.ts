@@ -1,6 +1,7 @@
 'use client'
 import styled from 'styled-components'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const Container = styled.section`
   display: flex;
@@ -75,7 +76,32 @@ export const ImageLogo = styled(Image)`
     width: 60px;
   }
 `
-export const LogoWrapper = styled.a`
+// export const LogoWrapper = styled.a`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-decoration: none;
+//   transition: transform 0.3s ease;
+
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+
+//   &:hover img {
+//     filter: brightness(1.1) drop-shadow(0 0 10px #9877ff);
+//   }
+// `
+export const LogoText = styled.p`
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+  }
+`
+export const LogoWrapper = styled(motion.a)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,15 +114,5 @@ export const LogoWrapper = styled.a`
 
   &:hover img {
     filter: brightness(1.1) drop-shadow(0 0 10px #9877ff);
-  }
-`
-export const LogoText = styled.p`
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  @media (max-width: 768px) {
-    font-size: 0.6rem;
   }
 `
