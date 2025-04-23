@@ -46,10 +46,14 @@ export const Nome = styled.h1`
   width: 100%;
   font-weight: 700;
   font-size: 4.6rem;
-  line-height: 0;
   color: #ffff;
+  line-height: 0;
   @media (max-width: 768px) {
     font-size: 2.8rem;
+    z-index: 0;
+  }
+  @media (max-width: 400px) {
+    font-size: 2.1rem;
     z-index: 0;
   }
 `
