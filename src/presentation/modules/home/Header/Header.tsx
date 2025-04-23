@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Burguer } from '../Burguer/Burguer'
+import { motion } from 'framer-motion'
 import * as S from './Header.styled'
 export function Header() {
   const [currentSectionId, setCurrentSectionId] = useState('')
@@ -29,14 +30,30 @@ export function Header() {
     <S.Container>
       <S.LogoContainer>
         <S.Logo
+          as={motion.img}
           src="/logoRoxa.svg"
           alt="logo"
           $isVisible={currentSectionId === 'hero'}
+          initial={{ opacity: 0, x: -100 }}
+          animate={
+            currentSectionId === 'hero'
+              ? { opacity: 1, x: [-100, 30, 0] }
+              : { opacity: 0, x: -100 }
+          }
+          transition={{ duration: 1, ease: 'easeInOut' }}
         />
         <S.Logo
+          as={motion.img}
           src="/logoMobile.svg"
           alt="logo"
           $isVisible={currentSectionId === 'hero'}
+          initial={{ opacity: 0, x: -100 }}
+          animate={
+            currentSectionId === 'hero'
+              ? { opacity: 1, x: [-100, 30, 0] }
+              : { opacity: 0, x: -100 }
+          }
+          transition={{ duration: 1, ease: 'easeInOut' }}
           $isMobile
         />
         <S.Logo
