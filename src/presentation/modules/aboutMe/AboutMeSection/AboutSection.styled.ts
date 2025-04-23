@@ -88,6 +88,10 @@ export const TimelineContent = styled.div<TimelineItemProps>`
     margin-top: 0.5rem;
   }
 
+  @media (max-width: 1200px) {
+    max-width: 400px;
+  }
+
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -124,6 +128,9 @@ export const Line = styled.div`
     transform: translateX(0);
     top: 21%;
     height: 70%;
+  }
+  @media (max-width: 1200px) {
+    top: 25%;
   }
 `
 export const TimelineWrapper = styled.div`

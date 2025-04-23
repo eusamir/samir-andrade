@@ -41,7 +41,7 @@ export function Burguer({ $currentSection }: BurguerProps) {
 
               <S.ContactMe>Fale comigo aqui</S.ContactMe>
               <S.ButtonContainer>
-                <S.SocialLink href="#">
+                <S.SocialLink href="https://github.com/eusamir">
                   <S.ButtonSocial>
                     <GithubLogo color="#9747ff" size={30} weight="fill" />
                   </S.ButtonSocial>
